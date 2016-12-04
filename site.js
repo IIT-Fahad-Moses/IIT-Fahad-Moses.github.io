@@ -8,7 +8,7 @@ $.noConflict();
       event.preventDefault();
       var pcode = $('#pcode').val();
       // var clientKey = "js-9qZHzu2Flc59Eq5rx10JdKERovBlJp3TQ3ApyC4TOa3tA8U7aVRnFwf41RpLgtE7";
-      var api = 'http://api.zippopotam.us/US/' +pcode;
+      var api = 'http://api.zippopotam.us/US/' + pcode;
       $.get(api).done(function(input, json) {
         if (input != null) {
           var city = input.places[0]['place name'];
@@ -46,5 +46,4 @@ $.noConflict();
       })
     })
   })
-})(jQuery);/* Used the zippopotam api. This api uses .places[0] to parse data into json
-which is then passed onto the second api by wundergroud which displays the weather*/
+})(jQuery);
